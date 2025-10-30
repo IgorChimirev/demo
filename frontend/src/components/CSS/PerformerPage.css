@@ -1,0 +1,11 @@
+.performer-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.performer-page h1 {
+    color: red;
+    margin-bottom: 20px;
+}
+

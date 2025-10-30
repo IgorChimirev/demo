@@ -1,0 +1,468 @@
+/* ClientDashboard.css - ОБНОВЛЕННАЯ ВЕРСИЯ */
+.client-dashboard-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.client-dashboard {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow: hidden;
+    color: white;
+}
+
+.client-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #333;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.client-dashboard-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    width: 100%; /* Занимает всю ширину для правильного центрирования */
+    text-align: center;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background: #333;
+}
+
+.dashboard-tabs {
+    display: flex;
+    background: #000;
+    border-bottom: 1px solid #333;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background: #1a1a1a;
+    color: #ccc;
+}
+
+.tab-button.active {
+    color: white;
+    border-bottom-color: #111;
+    background: #111;
+}
+
+.dashboard-content {
+    padding: 24px;
+    max-height: calc(80vh - 120px);
+    overflow-y: auto;
+    background: #111;
+}
+
+/* Стили для формы создания заказа */
+.create-order-tab h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: white;
+    font-size: 20px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.form-select,
+.form-textarea,
+.form-input {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #1a1a1a;
+    color: white;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-select:focus,
+.form-textarea:focus,
+.form-input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.form-select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+.submit-button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background: #444;
+}
+
+.submit-button:disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+/* Стили для списка заказов */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-card {
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.order-card:hover {
+    border-color: #444;
+    background: #222;
+}
+
+.order-card.completed {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.order-header h4 {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status.в-поиске {
+    background: #664d00;
+    color: #ffd700;
+}
+
+.status.в-работе {
+    background: #004d40;
+    color: #00e5ff;
+}
+
+.status.completed {
+    background: #1b4332;
+    color: #80ffdb;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail label {
+    font-weight: 500;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail p {
+    margin: 0;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.detail span {
+    color: white;
+}
+
+.budget-amount {
+    color: #80ffdb !important;
+    font-weight: 500;
+}
+
+.order-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 8px 16px;
+    border: 1px solid #444;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.action-button:hover {
+    background: #444;
+    border-color: #555;
+}
+
+.action-button.cancel {
+    border-color: #990000;
+    color: #ff6b6b;
+}
+
+.action-button.cancel:hover {
+    background: #990000;
+    color: white;
+}
+
+.action-button.secondary {
+    border-color: #666;
+    color: #ccc;
+}
+
+.action-button.secondary:hover {
+    background: #666;
+    color: white;
+}
+
+/* Состояния загрузки и пустых списков */
+.loading,
+.no-orders {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.no-orders h3 {
+    margin-bottom: 12px;
+    color: #ccc;
+    font-size: 18px;
+}
+
+.loading {
+    font-size: 16px;
+}
+
+/* Стили для поля ввода цены */
+.price-hint {
+    color: #666;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Стили для блока summary */
+.form-summary {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.summary-item strong {
+    color: #999;
+}
+
+.summary-item span {
+    color: white;
+}
+
+/* Улучшения для числовых полей */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Заголовки вкладок */
+.current-orders-tab h3,
+.past-orders-tab h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 20px;
+}
+.client-dashboard-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #333;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.client-dashboard-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .client-dashboard-overlay {
+        padding: 10px;
+    }
+
+    .client-dashboard {
+        max-width: 100%;
+        max-height: 200vh;
+    }
+
+    .dashboard-content {
+        padding: 16px;
+    }
+
+    .client-dashboard-header {
+        padding: 16px;
+    }
+
+    .dashboard-tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        padding: 12px 16px;
+        border-bottom: none;
+        border-right: 3px solid transparent;
+    }
+
+    .tab-button.active {
+        border-bottom: none;
+        border-right-color: #111;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .action-button {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .order-details {
+        gap: 16px;
+    }
+
+    .form-summary {
+        padding: 16px;
+    }
+}

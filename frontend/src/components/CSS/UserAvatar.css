@@ -1,0 +1,30 @@
+.channel-avatar-Profil {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 11px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.channel-avatar-Profil.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

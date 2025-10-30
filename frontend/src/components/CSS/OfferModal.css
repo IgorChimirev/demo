@@ -1,0 +1,103 @@
+
+.offer-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.offer-modal {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    color: white;
+}
+
+.offer-header h2 {
+    margin: 0 0 20px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+}
+
+.offer-content {
+    margin-bottom: 24px;
+}
+
+.offer-text {
+    line-height: 1.6;
+}
+
+.offer-text h3 {
+    color: #fff;
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+.offer-text ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.offer-text li {
+    margin-bottom: 8px;
+}
+
+.offer-text a {
+    color: #4dabf7;
+    text-decoration: none;
+}
+
+.offer-text a:hover {
+    text-decoration: underline;
+}
+
+.offer-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.accept-button {
+    background: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accept-button:hover {
+    background: #3b99e0;
+}
+
+.interface-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-size: 18px;
+}
